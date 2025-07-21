@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<header class="site-header">
+  <nav>
+    <ul class="nav">
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#posts">Articles</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="hero" class="hero">
+  <h1>Hi — I’m Jane Doe</h1>
+  <p class="subtitle">Frontend-developer • Technical writer</p>
+  <p class="location">📍 Berlin, DE</p>
+  <div class="social">
+    <a href="https://github.com/yourname" aria-label="GitHub">
+      <img src="assets/icons/github.svg" width="24" height="24" alt="">
+    </a>
+    <a href="https://x.com/yourname" aria-label="X / Twitter">
+      <img src="assets/icons/twitter.svg" width="24" height="24" alt="">
+    </a>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <img src="assets/img/profile.jpg" alt="Jane Doe" class="avatar">
+  <p>
+    I build accessible, fast websites and write deep-dive tutorials for devs.
+    Four years’ experience with React, Node & Docs-as-Code.
+  </p>
+</section>
+
+<section id="work" class="work">
+  <h2>Selected clients</h2>
+  <div class="logos">
+    <img src="assets/img/logo1.png" alt="Client A">
+    <img src="assets/img/logo2.png" alt="Client B">
+    <img src="assets/img/logo3.png" alt="Client C">
+  </div>
+</section>
+
+<section id="posts" class="posts">
+  <h2>Latest articles</h2>
+  <ul>
+    <!-- Each li links to a file inside /posts -->
+    <li><a href="posts/2025-07-portfolio-accessibility.html">Making Portfolios Accessible</a></li>
+    <li><a href="posts/2025-06-dark-mode.html">Pure-CSS Dark-Mode Toggle</a></li>
+  </ul>
+  <p><em>Add more by dropping new files in <code>/posts/</code>.</em></p>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact me</h2>
+  <form action="https://formspree.io/f/yourFormID" method="POST">
+    <input name="name"  type="text"     placeholder="Name"   required>
+    <input name="email" type="email"    placeholder="Email"  required>
+    <textarea name="msg"                placeholder="Message" required></textarea>
+    <button>Send</button>
+  </form>
+</section>
+
+<footer class="footer">
+  © 2025 Jane Doe • Built with <a href="https://pages.github.com">GitHub Pages</a>
+</footer>
+</body>
+</html>
