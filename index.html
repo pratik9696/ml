@@ -2,76 +2,227 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>My Portfolio</title>
+  <title>Alex Rodriguez — Machine Learning Engineer & AI Researcher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Preferred system fonts; fallback to Inter via CDN -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-<header class="site-header">
-  <nav>
-    <ul class="nav">
-      <li><a href="#about">About</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#posts">Articles</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- ────────────────── HEADER & NAV ────────────────── -->
+  <header class="site-header">
+    <div class="wrapper">
+      <a class="logo" href="/">Alex Rodriguez</a>
+      <nav class="main-nav">
+        <a href="#projects">Projects</a>
+        <a href="#research">Research</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="btn btn--primary">Contact</a>
+      </nav>
+      <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-<section id="hero" class="hero">
-  <h1>Hi — I’m Jane Doe</h1>
-  <p class="subtitle">Frontend-developer • Technical writer</p>
-  <p class="location">📍 Berlin, DE</p>
-  <div class="social">
-    <a href="https://github.com/yourname" aria-label="GitHub">
-      <img src="assets/icons/github.svg" width="24" height="24" alt="">
-    </a>
-    <a href="https://x.com/yourname" aria-label="X / Twitter">
-      <img src="assets/icons/twitter.svg" width="24" height="24" alt="">
-    </a>
-  </div>
-</section>
+  <!-- ──────────────────── HERO  ───────────────────── -->
+  <section class="hero">
+    <div class="wrapper">
+      <h1 class="hero__title">Building intelligent systems that solve real-world problems.</h1>
+      <p class="hero__subtitle">Machine Learning Engineer specializing in computer vision, NLP, and MLOps. I design, develop, and deploy scalable AI solutions that drive business impact.</p>
+      <div class="hero__links">
+        <a class="btn btn--primary" href="#projects">View Projects</a>
+        <a class="btn" href="#research">Research Papers</a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__number">15+</span>
+          <span class="stat__label">ML Models Deployed</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">92%</span>
+          <span class="stat__label">Avg Model Accuracy</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">3</span>
+          <span class="stat__label">Research Papers</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="about" class="about">
-  <img src="assets/img/profile.jpg" alt="Jane Doe" class="avatar">
-  <p>
-    I build accessible, fast websites and write deep-dive tutorials for devs.
-    Four years’ experience with React, Node & Docs-as-Code.
-  </p>
-</section>
+  <!-- ────────────────── MAIN CONTENT  ────────────────── -->
+  <main class="wrapper">
+    
+    <!-- ────────────────── ML PROJECTS  ────────────────── -->
+    <section id="projects" class="projects">
+      <h2>Featured ML Projects</h2>
 
-<section id="work" class="work">
-  <h2>Selected clients</h2>
-  <div class="logos">
-    <img src="assets/img/logo1.png" alt="Client A">
-    <img src="assets/img/logo2.png" alt="Client B">
-    <img src="assets/img/logo3.png" alt="Client C">
-  </div>
-</section>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-card__image">
+            <img src="assets/img/medical-imaging.jpg" alt="Medical image segmentation interface">
+            <div class="project-card__badges">
+              <span class="badge badge--cv">Computer Vision</span>
+              <span class="badge badge--dl">Deep Learning</span>
+            </div>
+          </div>
+          <div class="project-card__content">
+            <h3>Medical Image Segmentation</h3>
+            <p class="project-card__description">Deep learning system for automated tumor detection in CT scans using U-Net architecture. Achieved 94.2% dice coefficient on validation set.</p>
+            <div class="project-card__tech">
+              <span class="tech-tag">PyTorch</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">MLflow</span>
+              <span class="tech-tag">AWS</span>
+            </div>
+            <div class="project-card__metrics">
+              <div class="metric">
+                <span class="metric__value">94.2%</span>
+                <span class="metric__label">Dice Score</span>
+              </div>
+              <div class="metric">
+                <span class="metric__value">15ms</span>
+                <span class="metric__label">Inference Time</span>
+              </div>
+            </div>
+            <div class="project-card__links">
+              <a href="https://github.com/alexrodriguez/medical-segmentation" class="btn btn--secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+              <a href="posts/medical-segmentation-deep-dive.html" class="btn btn--secondary">Case Study</a>
+            </div>
+          </div>
+        </article>
 
-<section id="posts" class="posts">
-  <h2>Latest articles</h2>
-  <ul>
-    <!-- Each li links to a file inside /posts -->
-    <li><a href="posts/2025-07-portfolio-accessibility.html">Making Portfolios Accessible</a></li>
-    <li><a href="posts/2025-06-dark-mode.html">Pure-CSS Dark-Mode Toggle</a></li>
-  </ul>
-  <p><em>Add more by dropping new files in <code>/posts/</code>.</em></p>
-</section>
+        <article class="project-card">
+          <div class="project-card__image">
+            <img src="assets/img/nlp-sentiment.jpg" alt="Sentiment analysis dashboard">
+            <div class="project-card__badges">
+              <span class="badge badge--nlp">NLP</span>
+              <span class="badge badge--api">Production</span>
+            </div>
+          </div>
+          <div class="project-card__content">
+            <h3>Real-time Sentiment Analysis API</h3>
+            <p class="project-card__description">Scalable BERT-based sentiment analysis system processing 10K+ requests/day with sub-100ms latency. Deployed on Kubernetes with auto-scaling.</p>
+            <div class="project-card__tech">
+              <span class="tech-tag">BERT</span>
+              <span class="tech-tag">FastAPI</span>
+              <span class="tech-tag">Kubernetes</span>
+              <span class="tech-tag">Redis</span>
+            </div>
+            <div class="project-card__metrics">
+              <div class="metric">
+                <span class="metric__value">96.8%</span>
+                <span class="metric__label">Accuracy</span>
+              </div>
+              <div class="metric">
+                <span class="metric__value">85ms</span>
+                <span class="metric__label">Avg Response</span>
+              </div>
+            </div>
+            <div class="project-card__links">
+              <a href="https://github.com/alexrodriguez/sentiment-api" class="btn btn--secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+              <a href="https://sentiment-api-demo.herokuapp.com" class="btn btn--secondary">Live Demo</a>
+            </div>
+          </div>
+        </article>
 
-<section id="contact" class="contact">
-  <h2>Contact me</h2>
-  <form action="https://formspree.io/f/yourFormID" method="POST">
-    <input name="name"  type="text"     placeholder="Name"   required>
-    <input name="email" type="email"    placeholder="Email"  required>
-    <textarea name="msg"                placeholder="Message" required></textarea>
-    <button>Send</button>
-  </form>
-</section>
+        <article class="project-card">
+          <div class="project-card__image">
+            <img src="assets/img/recommender.jpg" alt="Recommendation system interface">
+            <div class="project-card__badges">
+              <span class="badge badge--ml">Machine Learning</span>
+              <span class="badge badge--sys">Distributed</span>
+            </div>
+          </div>
+          <div class="project-card__content">
+            <h3>Distributed Recommendation Engine</h3>
+            <p class="project-card__description">Large-scale collaborative filtering system built with Apache Spark, serving personalized recommendations for 1M+ users with real-time model updates.</p>
+            <div class="project-card__tech">
+              <span class="tech-tag">Apache Spark</span>
+              <span class="tech-tag">Kafka</span>
+              <span class="tech-tag">Cassandra</span>
+              <span class="tech-tag">Python</span>
+            </div>
+            <div class="project-card__metrics">
+              <div class="metric">
+                <span class="metric__value">24%</span>
+                <span class="metric__label">CTR Improvement</span>
+              </div>
+              <div class="metric">
+                <span class="metric__value">1M+</span>
+                <span class="metric__label">Active Users</span>
+              </div>
+            </div>
+            <div class="project-card__links">
+              <a href="https://github.com/alexrodriguez/spark-recommender" class="btn btn--secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+              <a href="posts/building-scalable-recommenders.html" class="btn btn--secondary">Technical Blog</a>
+            </div>
+          </div>
+        </article>
 
-<footer class="footer">
-  © 2025 Jane Doe • Built with <a href="https://pages.github.com">GitHub Pages</a>
-</footer>
-</body>
-</html>
+        <article class="project-card">
+          <div class="project-card__image">
+            <img src="assets/img/mlops-pipeline.jpg" alt="MLOps pipeline dashboard">
+            <div class="project-card__badges">
+              <span class="badge badge--ops">MLOps</span>
+              <span class="badge badge--auto">CI/CD</span>
+            </div>
+          </div>
+          <div class="project-card__content">
+            <h3>End-to-End MLOps Pipeline</h3>
+            <p class="project-card__description">Complete MLOps infrastructure with automated training, testing, deployment, and monitoring. Features A/B testing framework and drift detection.</p>
+            <div class="project-card__tech">
+              <span class="tech-tag">Kubeflow</span>
+              <span class="tech-tag">GitHub Actions</span>
+              <span class="tech-tag">Prometheus</span>
+              <span class="tech-tag">Grafana</span>
+            </div>
+            <div class="project-card__metrics">
+              <div class="metric">
+                <span class="metric__value">80%</span>
+                <span class="metric__label">Deploy Time Reduction</span>
+              </div>
+              <div class="metric">
+                <span class="metric__value">99.9%</span>
+                <span class="metric__label">Uptime</span>
+              </div>
+            </div>
+            <div class="project-card__links">
+              <a href="https://github.com/alexrodriguez/mlops-template" class="btn btn--secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+              <a href="posts/mlops-best-practices.html" class="btn btn--secondary">Documentation</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ────────────────── RESEARCH & PUBLICATIONS  ────────────────── -->
+    <section id="research" class="research">
+      <h2>Research & Publications</h2>
+
+      <div class="research-grid">
+        <article class="research-card">
+          <div class="research-card
