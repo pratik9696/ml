@@ -6,27 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     :root {
-      --accent: #198754;
-      --secondary: #22223b;
-      --light: #f8f9fa;
-      --primary: #2563eb;
+      --primary: #EF3B33;       /* Bright Orange */
+      --secondary: #1D1842;     /* Deep Purple */
+      --accent: #FDA1A2;        /* Rose Pink */
+      --darknavy: #26223A;      /* Accent Navy */
+      --background: #FFF;
+      --base-text: #282633;
+      --muted: #6c6a83;
+      --highlight: #FD6E72;
     }
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: var(--light);
+      background: var(--background);
       margin: 0;
-      color: var(--secondary);
+      color: var(--base-text);
     }
     .container {
       max-width: 900px;
       margin: 40px auto;
-      background: #fff;
-      box-shadow: 0 4px 32px rgba(0,0,0,0.06);
+      background: var(--background);
+      box-shadow: 0 4px 32px rgba(29,24,66,0.07);
       border-radius: 14px;
       overflow: hidden;
     }
     header {
-      background: var(--primary);
+      background: linear-gradient(85deg, var(--secondary) 60%, var(--primary) 100%);
       color: #fff;
       padding: 32px 40px 24px 40px;
       display: flex;
@@ -41,12 +45,14 @@
     }
     .profile-main h1 {
       margin: 0 0 8px 0;
-      font-size: 2.1rem;
+      font-size: 2.2rem;
       font-weight: bold;
       letter-spacing: 1px;
     }
     .profile-detail {
-      font-size: 1.12rem;
+      font-size: 1.13rem;
+      color: var(--accent);
+      font-weight: 500;
     }
     .contact-icons {
       display: flex;
@@ -56,66 +62,63 @@
     .contact-icons a {
       color: #fff;
       text-decoration: none;
-      transition: opacity 0.2s;
-      opacity: 0.85;
+      transition: opacity 0.2s, transform 0.2s;
+      opacity: 0.83;
     }
     .contact-icons a:hover {
       opacity: 1;
+      transform: scale(1.1);
     }
     .contact-icons img {
       width: 28px;
       height: 28px;
       vertical-align: middle;
-      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.09));
+      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.13));
     }
     section {
       padding: 30px 40px;
+      background: var(--background);
     }
     section:not(:last-child) {
-      border-bottom: 1px solid #f1f1f1;
+      border-bottom: 1px solid #F2E6F4;
     }
     .section-title {
       color: var(--primary);
-      font-size: 1.23rem;
+      font-size: 1.22rem;
       margin-bottom: 12px;
-      letter-spacing: 1.2px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: bold;
+      border-left: 5px solid var(--accent);
+      padding-left: 10px;
     }
-    .competency-list, .project-list, .edu-cert-list, .exp-timeline {
-      list-style: none;
+    ul {
       padding: 0;
       margin: 0;
+      list-style: none;
     }
     .competency-list li, .edu-cert-list li, .project-list li {
-      margin-bottom: 6px;
-    }
-    .companies {
-      display: flex;
-      gap: 32px;
-      align-items: center;
-      margin-bottom: 12px;
-    }
-    .companies img {
-      width: 52px;
-      height: auto;
+      margin-bottom: 8px;
+      color: var(--base-text);
+      background: linear-gradient(90deg, var(--highlight) 0%, rgba(255,255,255,0.00) 80%);
       border-radius: 6px;
-      background: #f5f5f5;
-      box-shadow: 0px 1px 5px rgba(100,150,180,0.08);
-      padding: 5px;
+      padding: 7px 15px;
+      font-size: 1.05em;
     }
     .exp-timeline li {
-      margin-bottom: 28px;
-      padding-left: 10px;
-      border-left: 2px solid var(--accent);
+      margin-bottom: 32px;
+      padding-left: 12px;
+      border-left: 3px solid var(--primary);
       position: relative;
     }
     .exp-timeline li:before {
       content: '';
       position: absolute;
-      left: -11px;
-      top: 4px;
+      left: -12px;
+      top: 6px;
       width: 13px;
       height: 13px;
-      background: var(--accent);
+      background: var(--primary);
       border-radius: 50%;
       border: 2px solid #fff;
       z-index: 1;
@@ -123,23 +126,20 @@
     .company-role {
       font-weight: bold;
       color: var(--secondary);
-      margin-bottom: 2px;
+      margin-bottom: 1px;
     }
     .company-name {
       font-weight: 500;
       color: var(--primary);
     }
     .exp-dates {
-      font-size: 0.95em;
-      color: #666;
-      margin-bottom: 7px;
+      font-size: 0.98em;
+      color: var(--muted);
+      margin-bottom: 8px;
     }
     @media (max-width: 700px) {
       header, section {
-        padding: 18px 8vw;
-      }
-      .companies img {
-        width: 32px;
+        padding: 18px 6vw;
       }
     }
   </style>
@@ -149,7 +149,7 @@
     <header>
       <div class="profile-main">
         <h1>Pratik Kotkar</h1>
-        <div class="profile-detail">Lead Data Scientist &ndash; Machine Learning Engineer <br>Bangalore, India</div>
+        <div class="profile-detail">Lead Data Scientist &ndash; Machine Learning Engineer<br>Bangalore, India</div>
       </div>
       <div class="contact-icons">
         <a href="mailto:pratikkotkar9696@gmail.com" title="Email">
@@ -181,18 +181,12 @@
 
     <section>
       <div class="section-title">Professional Experience</div>
-      <div class="companies">
-        <img src="https://seeklogo.com/images/T/twid-logo-EBEB81CD01-seeklogo.com.png" alt="Twid Pay Logo" title="Twid Pay">
-        <img src="https://brandfetch.com/goniyo.com" alt="Niyo Logo" title="Niyo">
-        <img src="https://seeklogo.com/images/P/pharmeasy-logo-9C6179E2D7-seeklogo.com.png" alt="PharmEasy Logo" title="PharmEasy">
-        <img src="https://seeklogo.com/images/H/hansen-technologies-logo-833BBE7807-seeklogo.com.png" alt="Hansen Technologies Logo" title="Hansen Technologies">
-      </div>
       <ul class="exp-timeline">
         <li>
           <div class="company-role">Lead Data Scientist <span class="company-name">@ Twid Pay</span></div>
           <div class="exp-dates">June 2023 – Present, Bangalore</div>
           <ul>
-            <li>Designed and deployed ML-based user affluence scoring using ensemble methods, resulting in 8-9% conversion uplift for new users, and 16% for repeat customers.</li>
+            <li>Designed and deployed ML-based user affluence scoring using ensemble methods, resulting in 8–9% conversion uplift for new users, and 16% for repeat customers.</li>
             <li>Achieved F1 Score of 0.78 and 84% recall in user segmentation models, boosting marketing precision and ROI.</li>
             <li>Reduced API latency by 64% via eligibility scoring logic.</li>
             <li>Generated $280K (INR 2.5cr) monthly GMV with RFM models at 0.5% MDE, 0.05 significance.</li>
@@ -205,7 +199,7 @@
           <div class="exp-dates">Jan 2022 – Mar 2023, Bangalore</div>
           <ul>
             <li>Built lending propensity ML models; improved disbursement rates 20% with 79.5% recall on imbalanced data.</li>
-            <li>Optimized marketing budgets via Linear Programming; achieved 5-7% weekly user growth and $20K-30K monthly cost savings.</li>
+            <li>Optimized marketing budgets via Linear Programming; achieved 5–7% weekly user growth and $20K–30K monthly cost savings.</li>
             <li>Developed VKYC demand algorithm (XGBoost), raising approval rates from 20% → 24% in week one.</li>
             <li>Customer activation models at 88% accuracy increased FT activations 40% → 48%.</li>
             <li>Deployed SageMaker & Lambda ML APIs for real-time predictions.</li>
