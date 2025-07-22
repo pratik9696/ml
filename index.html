@@ -2,185 +2,202 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Pratik Kotkar | Lead Data Scientist</title>
+  <title>Pratik Kotkar | Resume</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts for Medium-style typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --background: #f7f7f7;
-      --content: #fff;
-      --primary: #0d8fcd;
-      --heading: #3d3d3d;
-      --text: #282633;
-      --muted: #8A8E97;
-      --timeline: #b7bece;
-      --bullet: #b7bece;
+      --background: #171717;   /* almost black */
+      --surface: #232324;      /* deep charcoal */
+      --text-primary: #F4F4F2; /* white-grey */
+      --text-secondary: #BDBDBD; /* medium gray */
+      --accent: #3F51B5;       /* blue accent for links/buttons */
+      --border: #2D2D2D;       /* dividers */
+      --gradient: linear-gradient(120deg, #212226 0%, #373737 100%);
     }
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: var(--background);
-      color: var(--text);
+    html, body {
       margin: 0;
+      padding: 0;
+      background: var(--background);
+      color: var(--text-primary);
+      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+      font-size: 17px;
     }
     .container {
-      max-width: 900px;
-      margin: 40px auto;
-      background: var(--content);
-      box-shadow: 0 4px 24px rgba(13,143,205,0.09);
-      border-radius: 13px;
+      max-width: 850px;
+      margin: 48px auto;
+      background: var(--surface);
+      box-shadow: 0 4px 22px rgba(0,0,0,0.14);
+      border-radius: 12px;
       overflow: hidden;
+      border: 1px solid var(--border);
     }
     header {
-      background: var(--primary);
-      color: #fff;
-      padding: 28px 40px 18px 40px;
+      background: var(--gradient);
+      padding: 32px 40px 24px 40px;
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       flex-wrap: wrap;
     }
     .profile-main {
       display: flex;
       flex-direction: column;
-      gap: 6px;
     }
     .profile-main h1 {
-      margin: 0 0 8px 0;
-      font-size: 2.1rem;
-      font-weight: bold;
-      color: #fff;
+      margin: 0 0 12px 0;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #FFF;
     }
     .profile-detail {
-      font-size: 1.12rem;
-      color: #eaf6ff;
-      font-weight: 400;
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+      margin-bottom: 10px;
     }
     .contact-icons {
       display: flex;
-      gap: 14px;
+      gap: 16px;
       align-items: center;
+      margin-top: 10px;
     }
     .contact-icons a {
-      color: #fff;
-      opacity: 0.85;
-      transition: opacity 0.2s, transform 0.2s;
+      color: var(--accent);
+      opacity: 0.9;
+      transition: opacity 0.2s;
     }
     .contact-icons a:hover {
       opacity: 1;
-      transform: scale(1.11);
     }
     .contact-icons img {
-      width: 27px;
-      height: 27px;
+      width: 28px;
+      height: 28px;
       vertical-align: middle;
+      filter: grayscale(100%);
+    }
+    .qr-block {
+      background: #18191C;
+      border-radius: 7px;
+      padding: 13px;
+      box-shadow: 0 2px 8px rgba(20,20,20,0.14);
+      text-align: center;
+      margin-top: 14px;
     }
     section {
-      padding: 30px 40px;
-      background: var(--content);
+      padding: 32px 42px 24px 42px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
     }
-    section:not(:last-child) {
-      border-bottom: 1px solid #e6e8eb;
+    section:last-child {
+      border-bottom: none;
     }
     .section-title {
-      color: var(--primary);
-      font-size: 1.18rem;
-      font-weight: bold;
+      color: #F4F4F2;
+      font-size: 1.15rem;
+      font-weight: 700;
       margin-bottom: 14px;
+      letter-spacing: 0.4px;
       text-transform: uppercase;
-      letter-spacing: 0.6px;
-      border-left: 4px solid var(--timeline);
+      border-left: 4px solid #444;
       padding-left: 10px;
     }
-    .competency-list {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-    .competency-list li {
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      font-size: 1.04em;
-      position: relative;
-      padding-left: 18px;
-    }
-    .competency-list li::before {
-      content: '';
-      display: inline-block;
-      width: 9px;
-      height: 9px;
-      background: var(--bullet);
-      border-radius: 50%;
-      margin-right: 12px;
-      position: absolute;
-      left: 0;
-      top: 10px;
-    }
-    /* Timeline Styles */
+    /* Monochrome elegant timeline for experience */
     .timeline {
-      position: relative;
       margin: 0;
       padding: 0;
       list-style: none;
-    }
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 25px;
-      top: 0;
-      width: 4px;
-      height: 100%;
-      background: var(--timeline);
-      border-radius: 2px;
+      position: relative;
+      border-left: 3px solid #363636;
+      margin-left: 16px;
     }
     .timeline-event {
       position: relative;
-      padding-left: 60px;
-      margin-bottom: 38px;
+      margin-bottom: 40px;
+      padding-left: 36px;
     }
     .timeline-event:last-child {
       margin-bottom: 0;
     }
     .timeline-dot {
       position: absolute;
-      left: 17px;
-      top: 7px;
-      width: 16px;
-      height: 16px;
-      background: var(--primary);
+      left: -13px;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      background: #212226;
+      border: 3.5px solid #636363;
       border-radius: 50%;
-      border: 3px solid #fff;
-      box-shadow: 0 1px 6px rgba(13,143,205,0.13);
-      z-index: 2;
+      z-index: 1;
     }
     .timeline-date {
-      font-size: 0.98em;
-      color: var(--muted);
-      margin-bottom: 3px;
+      font-size: 0.97em;
+      color: var(--text-secondary);
+      margin-bottom: 2px;
     }
     .timeline-title {
-      font-weight: bold;
-      color: var(--heading);
+      font-weight: 600;
+      color: #f6f6f7;
+      margin-bottom: 2px;
+      font-size: 1.07em;
     }
     .timeline-company {
-      color: var(--primary);
+      color: #A0A5AA;
       font-weight: 500;
+      margin-left: 9px;
     }
     .timeline-details {
       margin: 6px 0 0 0;
-      padding: 0 0 0 2px;
+      color: var(--text-secondary);
+      padding-left: 2px;
     }
     .timeline-details li {
       margin-bottom: 6px;
-      padding-left: 0;
-      font-size: 1.03em;
-      line-height: 1.46;
+      line-height: 1.6;
+      font-size: 1em;
+      position: relative;
+      padding-left: 13px;
     }
-    /* Responsive */
+    .timeline-details li:before {
+      content: '';
+      position: absolute;
+      left: 0px;
+      top: 11px;
+      width: 7px;
+      height: 7px;
+      background: #444;
+      border-radius: 50%;
+    }
+    /* For skills and projects: subtle minimalist list bullets */
+    .mono-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .mono-list li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 9px;
+      color: #D3D3D3;
+      font-size: 1.04em;
+    }
+    .mono-list li:before {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 11px;
+      width: 9px;
+      height: 9px;
+      background: #232324;
+      border: 2.5px solid #6c6c6f;
+      border-radius: 50%;
+    }
     @media (max-width: 700px) {
-      header, section { padding: 16px 4vw; }
-      .timeline-event { padding-left: 40px; }
-      .timeline::before { left: 14px; }
-      .timeline-dot { left: 6px; }
+      header, section { padding: 22px 5vw; }
+      .timeline-event { padding-left: 20px; }
+      .timeline-dot { left: -14px; }
     }
   </style>
 </head>
@@ -190,27 +207,33 @@
       <div class="profile-main">
         <h1>Pratik Kotkar</h1>
         <div class="profile-detail">Lead Data Scientist – Machine Learning Engineer<br>Bangalore, India</div>
-      </div>
-      <div class="contact-icons">
-        <a href="mailto:pratikkotkar9696@gmail.com" title="Email">
-          <img src="https://img.icons8.com/ios-filled/50/ffffff/new-post.png" alt="Email Icon">
-        </a>
-        <a href="https://linkedin.com/in/pratikkotkar9696" title="LinkedIn" target="_blank">
-          <img src="https://img.icons8.com/color/48/ffffff/linkedin-circled--v1.png" alt="LinkedIn">
-        </a>
+        <div class="contact-icons">
+          <a href="mailto:pratikkotkar9696@gmail.com" title="Email">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/new-post.png" alt="Email Icon">
+          </a>
+          <a href="https://linkedin.com/in/pratikkotkar9696" title="LinkedIn" target="_blank">
+            <img src="https://img.icons8.com/color/48/ffffff/linkedin-circled--v1.png" alt="LinkedIn">
+          </a>
+        </div>
+        <!-- QR block -->
+        <div class="qr-block" style="margin-top:18px;">
+          <div style="font-size:0.93em;color:#a7a8ae;margin-bottom:4px;">Scan for online resume</div>
+          <!-- Replace src below with your Base64-encoded QR for your public resume URL -->
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=https://pratikkotkar.github.io/" alt="QR Code to online resume" style="width:120px; height:120px; border-radius:6px;">
+        </div>
       </div>
     </header>
 
     <section>
       <div class="section-title">Professional Summary</div>
       <div>
-        Results-driven Lead Data Scientist with about 7 years of experience in machine learning, statistical modeling, and data-driven decision making. Proven record in building production-ready models generating $280K+ monthly GMV impact. Expert in Python, XGBoost, AWS, MLOps, with strong cross-functional leadership.
+        Results-driven Lead Data Scientist with about 7 years in machine learning, statistical modeling, and data-driven decision making. Proven track record of building production-ready models that generated $280K+ monthly GMV impact. Expert in Python, XGBoost, AWS, and MLOps, experienced in leading analytics frameworks and cross-functional teams.
       </div>
     </section>
 
     <section>
       <div class="section-title">Core Competencies</div>
-      <ul class="competency-list">
+      <ul class="mono-list">
         <li>Python, SQL, PySpark</li>
         <li>Machine Learning: XGBoost, Random Forest, TensorFlow, PyTorch, Scikit-learn, Deep Learning</li>
         <li>Data Analysis: Statistical Modeling, Predictive Analytics, A/B Testing, Time Series Forecasting, RFM Analysis</li>
@@ -229,10 +252,10 @@
             Lead Data Scientist <span class="timeline-company">@ Twid Pay</span>
           </div>
           <ul class="timeline-details">
-            <li>Designed and deployed ML-based user affluence scoring; increased new user conversion by 8–9% and repeat by 16%.</li>
-            <li>Achieved F1 score 0.78, 84% recall in user segmentation models—improved marketing ROI.</li>
-            <li>Reduced API response by 64% with advanced eligibility scoring logic.</li>
-            <li>Drove $280K monthly GMV impact with robust RFM models (0.5% MDE, p&lt;0.05).</li>
+            <li>Designed and deployed ML-based affluence scoring; increased new user conversion by 8–9% and repeat by 16%.</li>
+            <li>Achieved F1 score 0.78, 84% recall in user segmentation—improved marketing ROI.</li>
+            <li>Reduced API response by 64% with efficient eligibility scoring logic.</li>
+            <li>Generated $280K monthly GMV impact with RFM models.</li>
             <li>Implemented full MLOps with AWS S3, Airflow, and MLflow.</li>
             <li>Led A/B testing for targeted campaign optimization.</li>
           </ul>
@@ -245,10 +268,10 @@
           </div>
           <ul class="timeline-details">
             <li>Built propensity models improving lending disbursement by 20%, 79.5% recall.</li>
-            <li>Optimized marketing budgets (LP methods), growing users by 5–7% weekly, saving $20K–30K monthly.</li>
-            <li>Developed VKYC demand algorithm (XGBoost)—approval jump from 20% to 24%.</li>
-            <li>Activation prediction models at 88% accuracy, FT activation up from 40% to 48%.</li>
-            <li>Deployed SageMaker & Lambda ML APIs for real-time serving.</li>
+            <li>Optimized marketing budgets using LP, driving 5–7% weekly user growth and $20K–30K monthly savings.</li>
+            <li>Developed VKYC demand algorithm—approval jump from 20% to 24%.</li>
+            <li>Prediction models at 88% accuracy, FT activation up from 40% to 48%.</li>
+            <li>Deployed SageMaker & Lambda APIs for real-time ML serving.</li>
           </ul>
         </li>
         <li class="timeline-event">
@@ -258,8 +281,8 @@
             Business Data Analyst <span class="timeline-company">@ PharmEasy</span>
           </div>
           <ul class="timeline-details">
-            <li>Developed ensemble demand forecasting (ARIMA/SARIMA/WMA); accuracy improved by 40%.</li>
-            <li>Ran large-scale time series for COVID surges and seasonality.</li>
+            <li>Developed demand forecasting (ARIMA/SARIMA/WMA); improved accuracy by 40%.</li>
+            <li>Executed time series for COVID-19 surges and inventory seasonality.</li>
           </ul>
         </li>
         <li class="timeline-event">
@@ -269,9 +292,9 @@
             Data Analyst <span class="timeline-company">@ Hansen Technologies</span>
           </div>
           <ul class="timeline-details">
-            <li>Delivered insights for telecom product optimization in Latin America & Australia.</li>
-            <li>Partnered with business teams for analytics-focused solutions.</li>
-            <li>Developed frameworks supporting strategic data-driven decisions.</li>
+            <li>Insights for telecom optimization (Latin America & Australia).</li>
+            <li>Analytics frameworks for cross-functional decision support.</li>
+            <li>Strategic reporting for telecom product portfolio.</li>
           </ul>
         </li>
       </ul>
@@ -279,27 +302,27 @@
 
     <section>
       <div class="section-title">Education</div>
-      <ul class="competency-list" style="margin-bottom:0;">
+      <ul class="mono-list" style="margin-bottom:0;">
         <li>Bachelor of Engineering, Computer Science – MIT College of Engineering, Pune, 2018</li>
       </ul>
     </section>
 
     <section>
       <div class="section-title">Certifications & Achievements</div>
-      <ul class="competency-list" style="margin-bottom:0;">
+      <ul class="mono-list" style="margin-bottom:0;">
         <li>Top 100 Finalist – Rakathon by Rakuten (LLM-based project), Sep 2023</li>
         <li>Winner – Vodafone-Idea Hackathon (VIL CodeFest), Feb 2020</li>
         <li>AWS Certified Machine Learning Practitioner (pursuing)</li>
-        <li>Expertise: Advanced Statistical Analysis, Machine Learning Algorithms</li>
+        <li>Advanced Statistical Analysis & Machine Learning Algorithms expertise</li>
       </ul>
     </section>
 
     <section>
       <div class="section-title">Key Technical Projects</div>
-      <ul class="competency-list" style="margin-bottom:0;">
-        <li>RFM-Based Revenue Optimization System: Deployed pipeline generating $280K monthly impact.</li>
-        <li>Real-Time Scoring API: Architected system cutting response latency by 64%.</li>
-        <li>Customer Segmentation & Personalization Engine: Achieved 84% recall, 0.78 F1-score.</li>
+      <ul class="mono-list" style="margin-bottom:0;">
+        <li>RFM-Based Revenue Optimization System: Pipeline generating $280K monthly impact.</li>
+        <li>Real-Time Scoring API: Reduced ML response latency by 64%.</li>
+        <li>Customer Segmentation Engine: Achieved 84% recall, 0.78 F1-score.</li>
       </ul>
     </section>
   </div>
