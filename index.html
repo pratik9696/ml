@@ -2,227 +2,260 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Alex Rodriguez — Machine Learning Engineer & AI Researcher</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Preferred system fonts; fallback to Inter via CDN -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <title>Pratik Kotkar | Lead Data Scientist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --accent: #198754;
+      --secondary: #22223b;
+      --light: #f8f9fa;
+      --primary: #2563eb;
+    }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--light);
+      margin: 0;
+      color: var(--secondary);
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.06);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 32px 40px 24px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .profile-main {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .profile-main h1 {
+      margin: 0 0 8px 0;
+      font-size: 2.1rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .profile-detail {
+      font-size: 1.12rem;
+    }
+    .contact-icons {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+    .contact-icons a {
+      color: #fff;
+      text-decoration: none;
+      transition: opacity 0.2s;
+      opacity: 0.85;
+    }
+    .contact-icons a:hover {
+      opacity: 1;
+    }
+    .contact-icons img {
+      width: 28px;
+      height: 28px;
+      vertical-align: middle;
+      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.09));
+    }
+    section {
+      padding: 30px 40px;
+    }
+    section:not(:last-child) {
+      border-bottom: 1px solid #f1f1f1;
+    }
+    .section-title {
+      color: var(--primary);
+      font-size: 1.23rem;
+      margin-bottom: 12px;
+      letter-spacing: 1.2px;
+    }
+    .competency-list, .project-list, .edu-cert-list, .exp-timeline {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .competency-list li, .edu-cert-list li, .project-list li {
+      margin-bottom: 6px;
+    }
+    .companies {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .companies img {
+      width: 52px;
+      height: auto;
+      border-radius: 6px;
+      background: #f5f5f5;
+      box-shadow: 0px 1px 5px rgba(100,150,180,0.08);
+      padding: 5px;
+    }
+    .exp-timeline li {
+      margin-bottom: 28px;
+      padding-left: 10px;
+      border-left: 2px solid var(--accent);
+      position: relative;
+    }
+    .exp-timeline li:before {
+      content: '';
+      position: absolute;
+      left: -11px;
+      top: 4px;
+      width: 13px;
+      height: 13px;
+      background: var(--accent);
+      border-radius: 50%;
+      border: 2px solid #fff;
+      z-index: 1;
+    }
+    .company-role {
+      font-weight: bold;
+      color: var(--secondary);
+      margin-bottom: 2px;
+    }
+    .company-name {
+      font-weight: 500;
+      color: var(--primary);
+    }
+    .exp-dates {
+      font-size: 0.95em;
+      color: #666;
+      margin-bottom: 7px;
+    }
+    @media (max-width: 700px) {
+      header, section {
+        padding: 18px 8vw;
+      }
+      .companies img {
+        width: 32px;
+      }
+    }
+  </style>
 </head>
-
 <body>
-  <!-- ────────────────── HEADER & NAV ────────────────── -->
-  <header class="site-header">
-    <div class="wrapper">
-      <a class="logo" href="/">Alex Rodriguez</a>
-      <nav class="main-nav">
-        <a href="#projects">Projects</a>
-        <a href="#research">Research</a>
-        <a href="#about">About</a>
-        <a href="#contact" class="btn btn--primary">Contact</a>
-      </nav>
-      <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="drawer">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- ──────────────────── HERO  ───────────────────── -->
-  <section class="hero">
-    <div class="wrapper">
-      <h1 class="hero__title">Building intelligent systems that solve real-world problems.</h1>
-      <p class="hero__subtitle">Machine Learning Engineer specializing in computer vision, NLP, and MLOps. I design, develop, and deploy scalable AI solutions that drive business impact.</p>
-      <div class="hero__links">
-        <a class="btn btn--primary" href="#projects">View Projects</a>
-        <a class="btn" href="#research">Research Papers</a>
+  <div class="container">
+    <header>
+      <div class="profile-main">
+        <h1>Pratik Kotkar</h1>
+        <div class="profile-detail">Lead Data Scientist &ndash; Machine Learning Engineer <br>Bangalore, India</div>
       </div>
-      <div class="hero__stats">
-        <div class="stat">
-          <span class="stat__number">15+</span>
-          <span class="stat__label">ML Models Deployed</span>
-        </div>
-        <div class="stat">
-          <span class="stat__number">92%</span>
-          <span class="stat__label">Avg Model Accuracy</span>
-        </div>
-        <div class="stat">
-          <span class="stat__number">3</span>
-          <span class="stat__label">Research Papers</span>
-        </div>
+      <div class="contact-icons">
+        <a href="mailto:pratikkotkar9696@gmail.com" title="Email">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/new-post.png" alt="Email Icon">
+        </a>
+        <a href="https://linkedin.com/in/pratikkotkar9696" title="LinkedIn" target="_blank">
+          <img src="https://img.icons8.com/color/48/ffffff/linkedin-circled--v1.png" alt="LinkedIn">
+        </a>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- ────────────────── MAIN CONTENT  ────────────────── -->
-  <main class="wrapper">
-    
-    <!-- ────────────────── ML PROJECTS  ────────────────── -->
-    <section id="projects" class="projects">
-      <h2>Featured ML Projects</h2>
-
-      <div class="project-grid">
-        <article class="project-card">
-          <div class="project-card__image">
-            <img src="assets/img/medical-imaging.jpg" alt="Medical image segmentation interface">
-            <div class="project-card__badges">
-              <span class="badge badge--cv">Computer Vision</span>
-              <span class="badge badge--dl">Deep Learning</span>
-            </div>
-          </div>
-          <div class="project-card__content">
-            <h3>Medical Image Segmentation</h3>
-            <p class="project-card__description">Deep learning system for automated tumor detection in CT scans using U-Net architecture. Achieved 94.2% dice coefficient on validation set.</p>
-            <div class="project-card__tech">
-              <span class="tech-tag">PyTorch</span>
-              <span class="tech-tag">Docker</span>
-              <span class="tech-tag">MLflow</span>
-              <span class="tech-tag">AWS</span>
-            </div>
-            <div class="project-card__metrics">
-              <div class="metric">
-                <span class="metric__value">94.2%</span>
-                <span class="metric__label">Dice Score</span>
-              </div>
-              <div class="metric">
-                <span class="metric__value">15ms</span>
-                <span class="metric__label">Inference Time</span>
-              </div>
-            </div>
-            <div class="project-card__links">
-              <a href="https://github.com/alexrodriguez/medical-segmentation" class="btn btn--secondary">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                </svg>
-                GitHub
-              </a>
-              <a href="posts/medical-segmentation-deep-dive.html" class="btn btn--secondary">Case Study</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-card__image">
-            <img src="assets/img/nlp-sentiment.jpg" alt="Sentiment analysis dashboard">
-            <div class="project-card__badges">
-              <span class="badge badge--nlp">NLP</span>
-              <span class="badge badge--api">Production</span>
-            </div>
-          </div>
-          <div class="project-card__content">
-            <h3>Real-time Sentiment Analysis API</h3>
-            <p class="project-card__description">Scalable BERT-based sentiment analysis system processing 10K+ requests/day with sub-100ms latency. Deployed on Kubernetes with auto-scaling.</p>
-            <div class="project-card__tech">
-              <span class="tech-tag">BERT</span>
-              <span class="tech-tag">FastAPI</span>
-              <span class="tech-tag">Kubernetes</span>
-              <span class="tech-tag">Redis</span>
-            </div>
-            <div class="project-card__metrics">
-              <div class="metric">
-                <span class="metric__value">96.8%</span>
-                <span class="metric__label">Accuracy</span>
-              </div>
-              <div class="metric">
-                <span class="metric__value">85ms</span>
-                <span class="metric__label">Avg Response</span>
-              </div>
-            </div>
-            <div class="project-card__links">
-              <a href="https://github.com/alexrodriguez/sentiment-api" class="btn btn--secondary">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                </svg>
-                GitHub
-              </a>
-              <a href="https://sentiment-api-demo.herokuapp.com" class="btn btn--secondary">Live Demo</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-card__image">
-            <img src="assets/img/recommender.jpg" alt="Recommendation system interface">
-            <div class="project-card__badges">
-              <span class="badge badge--ml">Machine Learning</span>
-              <span class="badge badge--sys">Distributed</span>
-            </div>
-          </div>
-          <div class="project-card__content">
-            <h3>Distributed Recommendation Engine</h3>
-            <p class="project-card__description">Large-scale collaborative filtering system built with Apache Spark, serving personalized recommendations for 1M+ users with real-time model updates.</p>
-            <div class="project-card__tech">
-              <span class="tech-tag">Apache Spark</span>
-              <span class="tech-tag">Kafka</span>
-              <span class="tech-tag">Cassandra</span>
-              <span class="tech-tag">Python</span>
-            </div>
-            <div class="project-card__metrics">
-              <div class="metric">
-                <span class="metric__value">24%</span>
-                <span class="metric__label">CTR Improvement</span>
-              </div>
-              <div class="metric">
-                <span class="metric__value">1M+</span>
-                <span class="metric__label">Active Users</span>
-              </div>
-            </div>
-            <div class="project-card__links">
-              <a href="https://github.com/alexrodriguez/spark-recommender" class="btn btn--secondary">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                </svg>
-                GitHub
-              </a>
-              <a href="posts/building-scalable-recommenders.html" class="btn btn--secondary">Technical Blog</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-card__image">
-            <img src="assets/img/mlops-pipeline.jpg" alt="MLOps pipeline dashboard">
-            <div class="project-card__badges">
-              <span class="badge badge--ops">MLOps</span>
-              <span class="badge badge--auto">CI/CD</span>
-            </div>
-          </div>
-          <div class="project-card__content">
-            <h3>End-to-End MLOps Pipeline</h3>
-            <p class="project-card__description">Complete MLOps infrastructure with automated training, testing, deployment, and monitoring. Features A/B testing framework and drift detection.</p>
-            <div class="project-card__tech">
-              <span class="tech-tag">Kubeflow</span>
-              <span class="tech-tag">GitHub Actions</span>
-              <span class="tech-tag">Prometheus</span>
-              <span class="tech-tag">Grafana</span>
-            </div>
-            <div class="project-card__metrics">
-              <div class="metric">
-                <span class="metric__value">80%</span>
-                <span class="metric__label">Deploy Time Reduction</span>
-              </div>
-              <div class="metric">
-                <span class="metric__value">99.9%</span>
-                <span class="metric__label">Uptime</span>
-              </div>
-            </div>
-            <div class="project-card__links">
-              <a href="https://github.com/alexrodriguez/mlops-template" class="btn btn--secondary">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                </svg>
-                GitHub
-              </a>
-              <a href="posts/mlops-best-practices.html" class="btn btn--secondary">Documentation</a>
-            </div>
-          </div>
-        </article>
+    <section>
+      <div class="section-title">Professional Summary</div>
+      <div>
+        Results-driven Lead Data Scientist with ~7 years of experience in machine learning, statistical modeling, and data-driven decision making. Proven track record of building production-ready models that generated $280K+ monthly GMV impact. Expert in Python, XGBoost, AWS, and MLOps, with strong leadership in managing analytics frameworks and cross-functional teams.
       </div>
     </section>
 
-    <!-- ────────────────── RESEARCH & PUBLICATIONS  ────────────────── -->
-    <section id="research" class="research">
-      <h2>Research & Publications</h2>
+    <section>
+      <div class="section-title">Core Competencies</div>
+      <ul class="competency-list">
+        <li>Python, SQL, PySpark</li>
+        <li>Machine Learning: XGBoost, Random Forest, TensorFlow, PyTorch, Scikit-learn, Deep Learning</li>
+        <li>Data Analysis: Statistical Modeling, Predictive Analytics, A/B Testing, Time Series Forecasting, RFM Analysis</li>
+        <li>Tools: AWS SageMaker, MLflow, Apache Airflow, Tableau, Git, Jupyter</li>
+        <li>Cloud: AWS S3, Big Data, ETL Pipelines, Apache Kafka</li>
+      </ul>
+    </section>
 
-      <div class="research-grid">
-        <article class="research-card">
-          <div class="research-card
+    <section>
+      <div class="section-title">Professional Experience</div>
+      <div class="companies">
+        <img src="https://seeklogo.com/images/T/twid-logo-EBEB81CD01-seeklogo.com.png" alt="Twid Pay Logo" title="Twid Pay">
+        <img src="https://brandfetch.com/goniyo.com" alt="Niyo Logo" title="Niyo">
+        <img src="https://seeklogo.com/images/P/pharmeasy-logo-9C6179E2D7-seeklogo.com.png" alt="PharmEasy Logo" title="PharmEasy">
+        <img src="https://seeklogo.com/images/H/hansen-technologies-logo-833BBE7807-seeklogo.com.png" alt="Hansen Technologies Logo" title="Hansen Technologies">
+      </div>
+      <ul class="exp-timeline">
+        <li>
+          <div class="company-role">Lead Data Scientist <span class="company-name">@ Twid Pay</span></div>
+          <div class="exp-dates">June 2023 – Present, Bangalore</div>
+          <ul>
+            <li>Designed and deployed ML-based user affluence scoring using ensemble methods, resulting in 8-9% conversion uplift for new users, and 16% for repeat customers.</li>
+            <li>Achieved F1 Score of 0.78 and 84% recall in user segmentation models, boosting marketing precision and ROI.</li>
+            <li>Reduced API latency by 64% via eligibility scoring logic.</li>
+            <li>Generated $280K (INR 2.5cr) monthly GMV with RFM models at 0.5% MDE, 0.05 significance.</li>
+            <li>Implemented MLOps pipeline with AWS, Airflow, and MLflow for lifecycle management.</li>
+            <li>Led A/B testing across segments for campaign optimization.</li>
+          </ul>
+        </li>
+        <li>
+          <div class="company-role">Senior Data Scientist <span class="company-name">@ Niyo Solutions Inc.</span></div>
+          <div class="exp-dates">Jan 2022 – Mar 2023, Bangalore</div>
+          <ul>
+            <li>Built lending propensity ML models; improved disbursement rates 20% with 79.5% recall on imbalanced data.</li>
+            <li>Optimized marketing budgets via Linear Programming; achieved 5-7% weekly user growth and $20K-30K monthly cost savings.</li>
+            <li>Developed VKYC demand algorithm (XGBoost), raising approval rates from 20% → 24% in week one.</li>
+            <li>Customer activation models at 88% accuracy increased FT activations 40% → 48%.</li>
+            <li>Deployed SageMaker & Lambda ML APIs for real-time predictions.</li>
+          </ul>
+        </li>
+        <li>
+          <div class="company-role">Business Data Analyst <span class="company-name">@ PharmEasy</span></div>
+          <div class="exp-dates">Nov 2020 – Jan 2022, Bangalore</div>
+          <ul>
+            <li>Built demand forecasting models (SARIMA, ARIMA, WMA), boosting accuracy by 40% for procurement and inventory.</li>
+            <li>Led time series analysis for COVID-19 demand surges and seasonality.</li>
+          </ul>
+        </li>
+        <li>
+          <div class="company-role">Data Analyst <span class="company-name">@ Hansen Technologies</span></div>
+          <div class="exp-dates">Aug 2018 – Nov 2020, Pune</div>
+          <ul>
+            <li>Delivered data-driven insights for telecom optimization across Latin America & Australia.</li>
+            <li>Liaised with cross-functional teams to translate business needs into analytics solutions.</li>
+            <li>Developed reporting frameworks for strategic telecom portfolio decision-making.</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="section-title">Education</div>
+      <ul class="edu-cert-list">
+        <li>Bachelor of Engineering, Computer Science &ndash; MIT College of Engineering, Pune, 2018</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="section-title">Certifications & Achievements</div>
+      <ul class="edu-cert-list">
+        <li>Top 100 Finalist – Rakathon by Rakuten (LLM-based project), Sep 2023</li>
+        <li>Winner – Vodafone-Idea Hackathon (VIL CodeFest), Feb 2020</li>
+        <li>AWS Certified Machine Learning Practitioner (pursuing)</li>
+        <li>Advanced Statistical Analysis and ML Algorithms expertise</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="section-title">Key Technical Projects</div>
+      <ul class="project-list">
+        <li>RFM-Based Revenue Optimization System: Production-ready RFM pipeline generating $280K monthly impact.</li>
+        <li>Real-Time Scoring API: Low-latency ML scoring system, reduced response time by 64%.</li>
+        <li>Customer Segmentation & Personalization Engine: Predictive user segmentation with 84% recall, 0.78 F1-score.</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
