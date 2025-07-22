@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <title>Pratik Kotkar | Resume</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google Fonts for Medium-style typography -->
+  <!-- Medium-like, modern typography -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --background: #171717;   /* almost black */
-      --surface: #232324;      /* deep charcoal */
-      --text-primary: #F4F4F2; /* white-grey */
-      --text-secondary: #BDBDBD; /* medium gray */
-      --accent: #3F51B5;       /* blue accent for links/buttons */
-      --border: #2D2D2D;       /* dividers */
-      --gradient: linear-gradient(120deg, #212226 0%, #373737 100%);
+      --background: #fff;
+      --surface: #f9f9f9;
+      --text-primary: #191a21;
+      --text-secondary: #545860;
+      --accent: #222;
+      --border: #E0E0E0;
+      --gradient: linear-gradient(120deg, #ededed 0%, #f7f7f7 100%);
     }
     html, body {
       margin: 0;
@@ -28,7 +28,7 @@
       max-width: 850px;
       margin: 48px auto;
       background: var(--surface);
-      box-shadow: 0 4px 22px rgba(0,0,0,0.14);
+      box-shadow: 0 2px 18px rgba(160,160,160,0.13);
       border-radius: 12px;
       overflow: hidden;
       border: 1px solid var(--border);
@@ -50,13 +50,13 @@
       font-size: 2rem;
       font-weight: 700;
       letter-spacing: 0.5px;
-      color: #FFF;
+      color: #191a21;
     }
     .profile-detail {
-      font-size: 1.1rem;
+      font-size: 1.13rem;
       color: var(--text-secondary);
       font-weight: 500;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
     .contact-icons {
       display: flex;
@@ -78,14 +78,6 @@
       vertical-align: middle;
       filter: grayscale(100%);
     }
-    .qr-block {
-      background: #18191C;
-      border-radius: 7px;
-      padding: 13px;
-      box-shadow: 0 2px 8px rgba(20,20,20,0.14);
-      text-align: center;
-      margin-top: 14px;
-    }
     section {
       padding: 32px 42px 24px 42px;
       background: var(--surface);
@@ -95,13 +87,13 @@
       border-bottom: none;
     }
     .section-title {
-      color: #F4F4F2;
+      color: #1a1a1a;
       font-size: 1.15rem;
       font-weight: 700;
       margin-bottom: 14px;
       letter-spacing: 0.4px;
       text-transform: uppercase;
-      border-left: 4px solid #444;
+      border-left: 4px solid #191a21;
       padding-left: 10px;
     }
     /* Monochrome elegant timeline for experience */
@@ -110,7 +102,7 @@
       padding: 0;
       list-style: none;
       position: relative;
-      border-left: 3px solid #363636;
+      border-left: 3px solid #efefef;
       margin-left: 16px;
     }
     .timeline-event {
@@ -123,12 +115,12 @@
     }
     .timeline-dot {
       position: absolute;
-      left: -13px;
+      left: -14px;
       top: 0;
       width: 18px;
       height: 18px;
-      background: #212226;
-      border: 3.5px solid #636363;
+      background: #fff;
+      border: 3px solid #222;
       border-radius: 50%;
       z-index: 1;
     }
@@ -139,14 +131,14 @@
     }
     .timeline-title {
       font-weight: 600;
-      color: #f6f6f7;
+      color: #17171b;
       margin-bottom: 2px;
       font-size: 1.07em;
     }
     .timeline-company {
-      color: #A0A5AA;
+      color: #57575b;
       font-weight: 500;
-      margin-left: 9px;
+      margin-left: 8px;
     }
     .timeline-details {
       margin: 6px 0 0 0;
@@ -167,10 +159,10 @@
       top: 11px;
       width: 7px;
       height: 7px;
-      background: #444;
+      background: #ddd;
       border-radius: 50%;
     }
-    /* For skills and projects: subtle minimalist list bullets */
+    /* Skills and lists: minimalist dark bullets */
     .mono-list {
       list-style: none;
       padding: 0;
@@ -180,7 +172,7 @@
       position: relative;
       padding-left: 20px;
       margin-bottom: 9px;
-      color: #D3D3D3;
+      color: #303036;
       font-size: 1.04em;
     }
     .mono-list li:before {
@@ -190,12 +182,35 @@
       top: 11px;
       width: 9px;
       height: 9px;
-      background: #232324;
-      border: 2.5px solid #6c6c6f;
+      background: #191a21;
+      border: 2.5px solid #c0c0c3;
       border-radius: 50%;
     }
+    /* QR code at bottom and centered */
+    .qr-block-bottom {
+      background: #f6f6f6;
+      border-top: 1px solid #eee;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 38px 0 33px 0;
+    }
+    .qr-block-bottom .qr-label {
+      font-size: 1em;
+      color: #686868;
+      margin-bottom: 7px;
+      letter-spacing: 0.06em;
+    }
+    .qr-block-bottom img {
+      width: 130px; 
+      height: 130px; 
+      border-radius: 8px; 
+      box-shadow: 0 3px 14px rgba(45,45,45,0.04);
+      border: 1px solid #d1d1d1;
+      background: #fff;
+    }
     @media (max-width: 700px) {
-      header, section { padding: 22px 5vw; }
+      header, section { padding: 20px 6vw; }
       .timeline-event { padding-left: 20px; }
       .timeline-dot { left: -14px; }
     }
@@ -209,17 +224,11 @@
         <div class="profile-detail">Lead Data Scientist – Machine Learning Engineer<br>Bangalore, India</div>
         <div class="contact-icons">
           <a href="mailto:pratikkotkar9696@gmail.com" title="Email">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/new-post.png" alt="Email Icon">
+            <img src="https://img.icons8.com/ios-filled/50/191a21/new-post.png" alt="Email Icon">
           </a>
           <a href="https://linkedin.com/in/pratikkotkar9696" title="LinkedIn" target="_blank">
-            <img src="https://img.icons8.com/color/48/ffffff/linkedin-circled--v1.png" alt="LinkedIn">
+            <img src="https://img.icons8.com/ios-filled/50/191a21/linkedin-circled--v1.png" alt="LinkedIn">
           </a>
-        </div>
-        <!-- QR block -->
-        <div class="qr-block" style="margin-top:18px;">
-          <div style="font-size:0.93em;color:#a7a8ae;margin-bottom:4px;">Scan for online resume</div>
-          <!-- Replace src below with your Base64-encoded QR for your public resume URL -->
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=https://pratikkotkar.github.io/" alt="QR Code to online resume" style="width:120px; height:120px; border-radius:6px;">
         </div>
       </div>
     </header>
@@ -281,7 +290,7 @@
             Business Data Analyst <span class="timeline-company">@ PharmEasy</span>
           </div>
           <ul class="timeline-details">
-            <li>Developed demand forecasting (ARIMA/SARIMA/WMA); improved accuracy by 40%.</li>
+            <li>Developed demand forecasting models (ARIMA/SARIMA/WMA); improved accuracy by 40%.</li>
             <li>Executed time series for COVID-19 surges and inventory seasonality.</li>
           </ul>
         </li>
@@ -325,6 +334,11 @@
         <li>Customer Segmentation Engine: Achieved 84% recall, 0.78 F1-score.</li>
       </ul>
     </section>
+    <!-- Centered QR code at the very bottom -->
+    <div class="qr-block-bottom">
+      <span class="qr-label">Scan to view online resume</span>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&color=191a21&bgcolor=ffffff&data=https://pratik9696.github.io/resume" alt="QR Code to online resume" />
+    </div>
   </div>
 </body>
 </html>
