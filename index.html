@@ -6,33 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     :root {
-      --primary: #EF3B33;       /* Bright Orange */
-      --secondary: #1D1842;     /* Deep Purple */
-      --accent: #FDA1A2;        /* Rose Pink */
-      --darknavy: #26223A;      /* Accent Navy */
-      --background: #FFF;
-      --base-text: #282633;
-      --muted: #6c6a83;
-      --highlight: #FD6E72;
+      --background: #f7f7f7;
+      --content: #fff;
+      --primary: #0d8fcd;
+      --heading: #3d3d3d;
+      --text: #282633;
+      --muted: #8A8E97;
+      --timeline: #b7bece;
+      --bullet: #b7bece;
     }
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
       background: var(--background);
+      color: var(--text);
       margin: 0;
-      color: var(--base-text);
     }
     .container {
       max-width: 900px;
       margin: 40px auto;
-      background: var(--background);
-      box-shadow: 0 4px 32px rgba(29,24,66,0.07);
-      border-radius: 14px;
+      background: var(--content);
+      box-shadow: 0 4px 24px rgba(13,143,205,0.09);
+      border-radius: 13px;
       overflow: hidden;
     }
     header {
-      background: linear-gradient(85deg, var(--secondary) 60%, var(--primary) 100%);
+      background: var(--primary);
       color: #fff;
-      padding: 32px 40px 24px 40px;
+      padding: 28px 40px 18px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -45,102 +45,142 @@
     }
     .profile-main h1 {
       margin: 0 0 8px 0;
-      font-size: 2.2rem;
+      font-size: 2.1rem;
       font-weight: bold;
-      letter-spacing: 1px;
+      color: #fff;
     }
     .profile-detail {
-      font-size: 1.13rem;
-      color: var(--accent);
-      font-weight: 500;
+      font-size: 1.12rem;
+      color: #eaf6ff;
+      font-weight: 400;
     }
     .contact-icons {
       display: flex;
-      gap: 18px;
+      gap: 14px;
       align-items: center;
     }
     .contact-icons a {
       color: #fff;
-      text-decoration: none;
+      opacity: 0.85;
       transition: opacity 0.2s, transform 0.2s;
-      opacity: 0.83;
     }
     .contact-icons a:hover {
       opacity: 1;
-      transform: scale(1.1);
+      transform: scale(1.11);
     }
     .contact-icons img {
-      width: 28px;
-      height: 28px;
+      width: 27px;
+      height: 27px;
       vertical-align: middle;
-      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.13));
     }
     section {
       padding: 30px 40px;
-      background: var(--background);
+      background: var(--content);
     }
     section:not(:last-child) {
-      border-bottom: 1px solid #F2E6F4;
+      border-bottom: 1px solid #e6e8eb;
     }
     .section-title {
       color: var(--primary);
-      font-size: 1.22rem;
-      margin-bottom: 12px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
+      font-size: 1.18rem;
       font-weight: bold;
-      border-left: 5px solid var(--accent);
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      border-left: 4px solid var(--timeline);
       padding-left: 10px;
     }
-    ul {
+    .competency-list {
       padding: 0;
       margin: 0;
       list-style: none;
     }
-    .competency-list li, .edu-cert-list li, .project-list li {
+    .competency-list li {
       margin-bottom: 8px;
-      color: var(--base-text);
-      background: linear-gradient(90deg, var(--highlight) 0%, rgba(255,255,255,0.00) 80%);
-      border-radius: 6px;
-      padding: 7px 15px;
-      font-size: 1.05em;
-    }
-    .exp-timeline li {
-      margin-bottom: 32px;
-      padding-left: 12px;
-      border-left: 3px solid var(--primary);
+      display: flex;
+      align-items: center;
+      font-size: 1.04em;
       position: relative;
+      padding-left: 18px;
     }
-    .exp-timeline li:before {
+    .competency-list li::before {
+      content: '';
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      background: var(--bullet);
+      border-radius: 50%;
+      margin-right: 12px;
+      position: absolute;
+      left: 0;
+      top: 10px;
+    }
+    /* Timeline Styles */
+    .timeline {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .timeline::before {
       content: '';
       position: absolute;
-      left: -12px;
-      top: 6px;
-      width: 13px;
-      height: 13px;
+      left: 25px;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--timeline);
+      border-radius: 2px;
+    }
+    .timeline-event {
+      position: relative;
+      padding-left: 60px;
+      margin-bottom: 38px;
+    }
+    .timeline-event:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: 17px;
+      top: 7px;
+      width: 16px;
+      height: 16px;
       background: var(--primary);
       border-radius: 50%;
-      border: 2px solid #fff;
-      z-index: 1;
+      border: 3px solid #fff;
+      box-shadow: 0 1px 6px rgba(13,143,205,0.13);
+      z-index: 2;
     }
-    .company-role {
-      font-weight: bold;
-      color: var(--secondary);
-      margin-bottom: 1px;
-    }
-    .company-name {
-      font-weight: 500;
-      color: var(--primary);
-    }
-    .exp-dates {
+    .timeline-date {
       font-size: 0.98em;
       color: var(--muted);
-      margin-bottom: 8px;
+      margin-bottom: 3px;
     }
+    .timeline-title {
+      font-weight: bold;
+      color: var(--heading);
+    }
+    .timeline-company {
+      color: var(--primary);
+      font-weight: 500;
+    }
+    .timeline-details {
+      margin: 6px 0 0 0;
+      padding: 0 0 0 2px;
+    }
+    .timeline-details li {
+      margin-bottom: 6px;
+      padding-left: 0;
+      font-size: 1.03em;
+      line-height: 1.46;
+    }
+    /* Responsive */
     @media (max-width: 700px) {
-      header, section {
-        padding: 18px 6vw;
-      }
+      header, section { padding: 16px 4vw; }
+      .timeline-event { padding-left: 40px; }
+      .timeline::before { left: 14px; }
+      .timeline-dot { left: 6px; }
     }
   </style>
 </head>
@@ -149,7 +189,7 @@
     <header>
       <div class="profile-main">
         <h1>Pratik Kotkar</h1>
-        <div class="profile-detail">Lead Data Scientist &ndash; Machine Learning Engineer<br>Bangalore, India</div>
+        <div class="profile-detail">Lead Data Scientist – Machine Learning Engineer<br>Bangalore, India</div>
       </div>
       <div class="contact-icons">
         <a href="mailto:pratikkotkar9696@gmail.com" title="Email">
@@ -164,7 +204,7 @@
     <section>
       <div class="section-title">Professional Summary</div>
       <div>
-        Results-driven Lead Data Scientist with ~7 years of experience in machine learning, statistical modeling, and data-driven decision making. Proven track record of building production-ready models that generated $280K+ monthly GMV impact. Expert in Python, XGBoost, AWS, and MLOps, with strong leadership in managing analytics frameworks and cross-functional teams.
+        Results-driven Lead Data Scientist with about 7 years of experience in machine learning, statistical modeling, and data-driven decision making. Proven record in building production-ready models generating $280K+ monthly GMV impact. Expert in Python, XGBoost, AWS, MLOps, with strong cross-functional leadership.
       </div>
     </section>
 
@@ -181,45 +221,57 @@
 
     <section>
       <div class="section-title">Professional Experience</div>
-      <ul class="exp-timeline">
-        <li>
-          <div class="company-role">Lead Data Scientist <span class="company-name">@ Twid Pay</span></div>
-          <div class="exp-dates">June 2023 – Present, Bangalore</div>
-          <ul>
-            <li>Designed and deployed ML-based user affluence scoring using ensemble methods, resulting in 8–9% conversion uplift for new users, and 16% for repeat customers.</li>
-            <li>Achieved F1 Score of 0.78 and 84% recall in user segmentation models, boosting marketing precision and ROI.</li>
-            <li>Reduced API latency by 64% via eligibility scoring logic.</li>
-            <li>Generated $280K (INR 2.5cr) monthly GMV with RFM models at 0.5% MDE, 0.05 significance.</li>
-            <li>Implemented MLOps pipeline with AWS, Airflow, and MLflow for lifecycle management.</li>
-            <li>Led A/B testing across segments for campaign optimization.</li>
+      <ul class="timeline">
+        <li class="timeline-event">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">June 2023 – Present, Bangalore</div>
+          <div class="timeline-title">
+            Lead Data Scientist <span class="timeline-company">@ Twid Pay</span>
+          </div>
+          <ul class="timeline-details">
+            <li>Designed and deployed ML-based user affluence scoring; increased new user conversion by 8–9% and repeat by 16%.</li>
+            <li>Achieved F1 score 0.78, 84% recall in user segmentation models—improved marketing ROI.</li>
+            <li>Reduced API response by 64% with advanced eligibility scoring logic.</li>
+            <li>Drove $280K monthly GMV impact with robust RFM models (0.5% MDE, p&lt;0.05).</li>
+            <li>Implemented full MLOps with AWS S3, Airflow, and MLflow.</li>
+            <li>Led A/B testing for targeted campaign optimization.</li>
           </ul>
         </li>
-        <li>
-          <div class="company-role">Senior Data Scientist <span class="company-name">@ Niyo Solutions Inc.</span></div>
-          <div class="exp-dates">Jan 2022 – Mar 2023, Bangalore</div>
-          <ul>
-            <li>Built lending propensity ML models; improved disbursement rates 20% with 79.5% recall on imbalanced data.</li>
-            <li>Optimized marketing budgets via Linear Programming; achieved 5–7% weekly user growth and $20K–30K monthly cost savings.</li>
-            <li>Developed VKYC demand algorithm (XGBoost), raising approval rates from 20% → 24% in week one.</li>
-            <li>Customer activation models at 88% accuracy increased FT activations 40% → 48%.</li>
-            <li>Deployed SageMaker & Lambda ML APIs for real-time predictions.</li>
+        <li class="timeline-event">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Jan 2022 – Mar 2023, Bangalore</div>
+          <div class="timeline-title">
+            Senior Data Scientist <span class="timeline-company">@ Niyo Solutions Inc.</span>
+          </div>
+          <ul class="timeline-details">
+            <li>Built propensity models improving lending disbursement by 20%, 79.5% recall.</li>
+            <li>Optimized marketing budgets (LP methods), growing users by 5–7% weekly, saving $20K–30K monthly.</li>
+            <li>Developed VKYC demand algorithm (XGBoost)—approval jump from 20% to 24%.</li>
+            <li>Activation prediction models at 88% accuracy, FT activation up from 40% to 48%.</li>
+            <li>Deployed SageMaker & Lambda ML APIs for real-time serving.</li>
           </ul>
         </li>
-        <li>
-          <div class="company-role">Business Data Analyst <span class="company-name">@ PharmEasy</span></div>
-          <div class="exp-dates">Nov 2020 – Jan 2022, Bangalore</div>
-          <ul>
-            <li>Built demand forecasting models (SARIMA, ARIMA, WMA), boosting accuracy by 40% for procurement and inventory.</li>
-            <li>Led time series analysis for COVID-19 demand surges and seasonality.</li>
+        <li class="timeline-event">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Nov 2020 – Jan 2022, Bangalore</div>
+          <div class="timeline-title">
+            Business Data Analyst <span class="timeline-company">@ PharmEasy</span>
+          </div>
+          <ul class="timeline-details">
+            <li>Developed ensemble demand forecasting (ARIMA/SARIMA/WMA); accuracy improved by 40%.</li>
+            <li>Ran large-scale time series for COVID surges and seasonality.</li>
           </ul>
         </li>
-        <li>
-          <div class="company-role">Data Analyst <span class="company-name">@ Hansen Technologies</span></div>
-          <div class="exp-dates">Aug 2018 – Nov 2020, Pune</div>
-          <ul>
-            <li>Delivered data-driven insights for telecom optimization across Latin America & Australia.</li>
-            <li>Liaised with cross-functional teams to translate business needs into analytics solutions.</li>
-            <li>Developed reporting frameworks for strategic telecom portfolio decision-making.</li>
+        <li class="timeline-event">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Aug 2018 – Nov 2020, Pune</div>
+          <div class="timeline-title">
+            Data Analyst <span class="timeline-company">@ Hansen Technologies</span>
+          </div>
+          <ul class="timeline-details">
+            <li>Delivered insights for telecom product optimization in Latin America & Australia.</li>
+            <li>Partnered with business teams for analytics-focused solutions.</li>
+            <li>Developed frameworks supporting strategic data-driven decisions.</li>
           </ul>
         </li>
       </ul>
@@ -227,27 +279,27 @@
 
     <section>
       <div class="section-title">Education</div>
-      <ul class="edu-cert-list">
-        <li>Bachelor of Engineering, Computer Science &ndash; MIT College of Engineering, Pune, 2018</li>
+      <ul class="competency-list" style="margin-bottom:0;">
+        <li>Bachelor of Engineering, Computer Science – MIT College of Engineering, Pune, 2018</li>
       </ul>
     </section>
 
     <section>
       <div class="section-title">Certifications & Achievements</div>
-      <ul class="edu-cert-list">
+      <ul class="competency-list" style="margin-bottom:0;">
         <li>Top 100 Finalist – Rakathon by Rakuten (LLM-based project), Sep 2023</li>
         <li>Winner – Vodafone-Idea Hackathon (VIL CodeFest), Feb 2020</li>
         <li>AWS Certified Machine Learning Practitioner (pursuing)</li>
-        <li>Advanced Statistical Analysis and ML Algorithms expertise</li>
+        <li>Expertise: Advanced Statistical Analysis, Machine Learning Algorithms</li>
       </ul>
     </section>
 
     <section>
       <div class="section-title">Key Technical Projects</div>
-      <ul class="project-list">
-        <li>RFM-Based Revenue Optimization System: Production-ready RFM pipeline generating $280K monthly impact.</li>
-        <li>Real-Time Scoring API: Low-latency ML scoring system, reduced response time by 64%.</li>
-        <li>Customer Segmentation & Personalization Engine: Predictive user segmentation with 84% recall, 0.78 F1-score.</li>
+      <ul class="competency-list" style="margin-bottom:0;">
+        <li>RFM-Based Revenue Optimization System: Deployed pipeline generating $280K monthly impact.</li>
+        <li>Real-Time Scoring API: Architected system cutting response latency by 64%.</li>
+        <li>Customer Segmentation & Personalization Engine: Achieved 84% recall, 0.78 F1-score.</li>
       </ul>
     </section>
   </div>
